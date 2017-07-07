@@ -10,5 +10,7 @@ RUN apt-get update && \
 # See http://php.net/manual/en/ref.pdo-mysql.php
 RUN { \
               echo 'extension=pdo.so'; \
-              echo 'extension=php_pdo_mysql.so'; \
+              echo 'extension=pdo_mysql.so'; \
        } > /usr/local/etc/php/conf.d/pdo-mysql.ini
+
+RUN a2enmod rewrite expires
