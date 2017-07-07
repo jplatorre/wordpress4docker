@@ -2,7 +2,7 @@ FROM wordpress:4.8.0-php5.6-apache
 
 # Install PDO-MySQL
 RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install pdo-mysql && \
+    DEBIAN_FRONTEND=noninteractive apt-get install php5-mysql && \
     apt-get clean -y && \
     apt-get autoremove -y
 
